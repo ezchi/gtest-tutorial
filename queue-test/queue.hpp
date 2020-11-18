@@ -7,7 +7,8 @@
 template <typename E>
 class Queue {
     public:
-        Queue();
+        Queue() {};
+
         void Enqueue(const E& element) {
             _queue.push_back(element);
         };
@@ -17,12 +18,11 @@ class Queue {
             return _e;
         };
         std::size_t size() const {
-            _queue.size();
+            return _queue.size();
         };
 
     private:
         std::vector<E> _queue;
-}
-
+};
 
 #endif // QUEUE__HPP
